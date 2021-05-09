@@ -22,11 +22,14 @@ public class UserController {
 
     @GetMapping("/")
     public List<User> GetUsers() {
+        // for (int i = 0; i < userRepository.findAll().size(); i++) {
+        // System.out.println(userRepository.findAll().get(i).getName());
+        // }
         return userRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public User GetUser(@PathVariable Integer id) {
+    public User GetUser(@PathVariable Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
@@ -45,7 +48,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public Integer DeleteUser(@PathVariable Integer id) {
+    public Long DeleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
         return id;
     }
