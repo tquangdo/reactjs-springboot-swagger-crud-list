@@ -17,20 +17,21 @@
 ![initializr](screenshot/initializr.png)
 ### add Maven dependencies
 `JAVA PROJECTS > Maven Dependencies[+] > springfox-swagger-ui(2.9.2) & springfox-swagger2(2.9.2) & spring-boot-starter-validation`
-=> auto add `pom.xml`
+=> auto add into `pom.xml`
 
 ## install frontend
 - `npm i axios`
 
 ## db: this project NOT build a db server, 'localhost:33060/obo' just for example!!!
-- `backend/src/main/java/io/mahesh/backend/UserRepository.java: public interface UserRepository extends JpaRepository<User,Long> {...}` means: tablename=`user` & `id` is `Long`
+- backend/src/main/java/io/mahesh/backend/UserRepository.java:
+- `public interface UserRepository extends JpaRepository<User,Long> {...}` means: tablename=`user` & `id` is `Long`
 => auto create table `obo.user`
-- `backend/src/main/java/io/mahesh/backend/User.java:`
+- backend/src/main/java/io/mahesh/backend/User.java:
 ```java
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 ```
-=> `id` is auto increment
+- => `id` is auto increment
 ![db](screenshot/db.png)
 
 ## api
@@ -39,7 +40,7 @@
 ## run
 ### backend
 - VSCode > `SPRING BOOT DASHBOARD` > `backend` > click `start` icon
->(note:) need `backend/src/main/resources/application.properties: spring.datasource.* & spring.jpa.hibernate.ddl-auto` due to add dependencies `MySQL Driver`
+>(note) need `backend/src/main/resources/application.properties: spring.datasource.* & spring.jpa.hibernate.ddl-auto` due to dependencies `MySQL Driver`
 >=> can NOT run spring boot if has wrong DB's inform or leave blank!!!
 - access browser `localhost:8080`
 ![be](screenshot/be.png)
