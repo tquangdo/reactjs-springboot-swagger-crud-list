@@ -15,7 +15,7 @@
 8. : `MySQL Driver` & `Spring Web` & `Spring Data JPA` & `Lombok`
 
 >getter & setter in `lombok`
-- /backend/User.java: `import lombok.Getter/Setter;` & `@Getter/Setter`
+>- /backend/User.java: `import lombok.Getter/Setter;` & `@Getter/Setter`
 #### in online tool
 -----
 ![initializr](screenshot/initializr.png)
