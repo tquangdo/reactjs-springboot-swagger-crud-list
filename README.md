@@ -13,6 +13,9 @@
 6. packaging type: jar
 7. java ver: `8` (OR `11`)
 8. : `MySQL Driver` & `Spring Web` & `Spring Data JPA` & `Lombok`
+
+>getter & setter in `lombok`
+- /backend/User.java: `import lombok.Getter/Setter;` & `@Getter/Setter`
 #### in online tool
 -----
 ![initializr](screenshot/initializr.png)
